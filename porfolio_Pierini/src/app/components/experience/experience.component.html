@@ -2,22 +2,20 @@
     <H1>Experiencia Laboral</H1>
     <div class="col-lg-8"></div>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <button id="button-add-about" type="button" class="button-add" routerLink="/newExperience"> <img
-                src="assets/add.ico" alt="" *ngIf="isLogged"> </button>
+        <button id="button-add-about" type="button" class="button-add" routerLink="/newExperience"*ngIf="isLogged"> <i class="bi bi-node-plus-fill"></i></button>
     </div>
     <div class="col-lg-1 "></div>
     <div class="col-lg-10">
-        <ul class="experience" *ngFor="let Experience of exp" >
-            <button id="button-edit" class="button-edit " routerLink="/editExperience/{{Experience.id}}" > <img
-                    src="assets/edit.ico" alt=""> </button>
-            <button id="button-erase" (click)="delete(Experience.id)" > <img src="assets/del.ico" alt=""></button>
-            <li>
-                <h2>{{Experience.nameE}}</h2><br>
-                <h3>{{Experience.descE}}-{{Experience.dateF}} </h3>
+        <div class="experience" *ngFor="let Experience of exp" >
+            <button id="button-edit" class="button-edit " routerLink="/editExperience/{{Experience.id}}" > <i class="bi bi-pencil-square"></i> </button>
+            <button id="button-erase" (click)="delete(Experience.id)" ><i class="bi bi-trash"></i></button>
+            <div><h2><u>EMPRESA</u> </h2><br>
+                <h2>{{Experience.nameE}}</h2>
+                <h6>({{Experience.dateI}}  --  {{Experience.dateF}}) </h6>
 
-            </li>
-            <p><b>{{Experience.dateI}} </b></p>
-        </ul>
+            </div>
+            <h2><u> Ocupación: </u></h2> <h2> {{Experience.descE}}</h2> 
+        </div>
 
     </div>
 </div>

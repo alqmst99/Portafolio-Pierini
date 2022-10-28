@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experience } from 'src/app/model/experience.model';
-import { Hys } from 'src/app/model/hys.model';
+
 import { ExperienceService } from 'src/app/service/experience.service';
 
 @Component({
@@ -16,19 +16,19 @@ exp : Experience;
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.expService.detail(id).subscribe(data => { 
-      this.exp=data;
-    },err =>{
+      this.exp = data;
+    }, err =>{
       alert("error in the modifaication");
-      this.router.navigate(['']);
+      this.router.navigate(['/home']);
     } )
   }
 onEdit():void{
   const id = this.activatedRouter.snapshot.params['id'];
-this.expService.update(id, this.exp).subscribe(data => {
-  this.router.navigate(['']);
+this.expService.update(id, this.exp).subscribe( data => {
+  this.router.navigate(['/home']);
 }, err => {
-  alert("error in the modifaication");
-  this.router.navigate(['']);
+  alert("error on update");
+  this.router.navigate(['/home']);
 })
 }
 }

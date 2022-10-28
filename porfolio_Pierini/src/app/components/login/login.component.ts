@@ -39,8 +39,8 @@ onLogin(): void {
     this.tokenService.setToken(data.token);
     this.tokenService.setAuthorities(data.authorities);
     this.roles = data.authorities;
-    this.router.navigate(['']);
-    alert("bienvenido");
+    this.router.navigate(['/home']);
+    alert('¡BIENVENIDO!  ' + this.loginUser.nameUser);
   }, err  => {
     this.isLogged = false;
     this.isLogginFail = true;

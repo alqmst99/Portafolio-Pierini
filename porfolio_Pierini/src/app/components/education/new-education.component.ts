@@ -13,19 +13,19 @@ export class NewEducationComponent implements OnInit {
   nameE: string='';
   dateI: string='';
   dateF: string='';
-  descE: string='';
+  descEd: string='';
 
   constructor(private eduService: EducationService, private router:Router) { }
 
   ngOnInit(): void {
   }
 onCreate(): void{
-  const edu = new Education(this.nameE, this.dateI, this.dateF, this.descE);
+  const edu = new Education(this.nameE, this.dateI, this.dateF, this.descEd);
   this.eduService.save(edu).subscribe(data => {alert("the experiense is save");
-  this.router.navigate(['']);
+  this.router.navigate(['/home']);
 }, err =>{
   alert("save fail");
-  this.router.navigate(['']);
+  this.router.navigate(['/home']);
 } )
 }
 }

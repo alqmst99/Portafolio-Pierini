@@ -13,7 +13,7 @@ export class EducationComponent implements OnInit {
   edu : Education[]= [];
 
   constructor(private eduService : EducationService, private tokenService: TokenService) { }
- 
+
   isLogged =false;
   ngOnInit(): void {
     this.chargeEdu();
@@ -36,4 +36,5 @@ chargeEdu():void{
   }
   )}
  }
+
 }

@@ -16,16 +16,16 @@ export class ExperienceService {
     return this.httpClient.get<Experience[]>(this.expURL + 'list')
 
   }
-  public detail(id:number):Observable<Experience>{
+  public detail(id : number):Observable<Experience>{
     return this.httpClient.get<Experience>(this.expURL + `detail/${id}`);
   }
-  public save(exp:Experience): Observable<any>{
+  public save(exp : Experience): Observable<any>{
 return this.httpClient.post<any>(this.expURL + 'create', exp);
   }
-  public update(id:number, exp:Experience):Observable<any>{ 
+  public update(id : number, exp : Experience): Observable<any>{ 
     return this.httpClient.put<any>(this.expURL + `update/${id}`, exp);
   }
-  public delete (id:number):Observable<any>{
+  public delete (id : number):Observable<any>{
     return this.httpClient.delete<any>(this.expURL+`delete/${id}`);
   }
  

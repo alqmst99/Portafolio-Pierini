@@ -22,10 +22,10 @@ export class NewExperienceComponent implements OnInit {
 onCreate():void{
   const exp= new Experience(this.nameE, this.dateI, this.dateF, this.descE);
   this.expService.save(exp).subscribe(data =>{alert("the experiense is save");
-this.router.navigate(['']);
+this.router.navigate(['/home']);
 }, err =>{
   alert("save fail");
-  this.router.navigate(['']);
+  this.router.navigate(['/home']);
 } )
 }
 }

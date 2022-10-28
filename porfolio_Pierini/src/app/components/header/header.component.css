@@ -2,6 +2,9 @@
     background: linear-gradient(90deg, rgba(210,50,199,1) 0%, rgba(13,12,154,1) 50%, rgba(252,69,251,0.6979385504201681) 100%);
 }
 
+a{
+    background-color: transparent;
+}
 #banner {
     width: 100%;
     height: 100%;
@@ -9,30 +12,33 @@
     margin: 0;
 }
 
-img {
-    width: 15%;
-    background: transparent;
- 
-    
-    }
-   
 
-
-
+  
 button {
     position: absolute;
     right: 0;
-    bottom: 90% !important;
-
-
+    bottom: 92% !important;
 }
 .fluid{
+    width: 35%;
     display:inline-block;
-    margin: 10px;
+    margin: 5px;
     align-content: center;
     background: transparent;
-  
-    
+     
 }
-
+i{
+    font-size: 200%;
+    margin: 5px;
+    position: relative;
+    right: 50;
+    left: 50;
+    bottom: 90% !important;
+}
+app-logo-ap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 92% !important;
+}
    

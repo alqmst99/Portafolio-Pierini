@@ -22,10 +22,10 @@ export class NewHysComponent implements OnInit {
     const skill = new Hys(this.name, this.porcent);
     this.hysService.save(skill).subscribe(data => {
       alert("the experiense is save");
-      this.router.navigate(['']);
+      this.router.navigate(['/home']);
     }, err => {
       alert("save fail");
-      this.router.navigate(['']);
+      this.router.navigate(['/home']);
     })
     
   }

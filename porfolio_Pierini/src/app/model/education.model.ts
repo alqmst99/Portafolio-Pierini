@@ -3,12 +3,12 @@ export class Education {
     nameE: string;
     dateI: string;
     dateF: string;
-    descE: string;
+    descEd: string;
     
-    constructor(nameE: string, dateI: string, dateF:string, descE: string){
+    constructor(nameE: string, dateI: string, dateF:string, descEd: string){
         this.nameE= nameE;
         this.dateI= dateI;
         this.dateF= dateF;
-        this.descE= descE;
+        this.descEd= descEd;
     }
 }

@@ -7,23 +7,23 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProjectsService {
-projURL='http://localhost:8080/project/'
+projURL='http://localhost:8080/project'
 
 constructor(private httpClient: HttpClient) { }
 public list(): Observable<Projects[]> {
-  return this.httpClient.get<Projects[]>(this.projURL + 'list')
+  return this.httpClient.get<Projects[]>(this.projURL + '/list')
 
 }
 public detail(id: number): Observable<Projects> {
-  return this.httpClient.get<Projects>(this.projURL + `detail/${id}`);
+  return this.httpClient.get<Projects>(this.projURL + `/detail/${id}`);
 }
 public save(proj: Projects): Observable<any> {
-  return this.httpClient.post<any>(this.projURL + 'create', proj);
+  return this.httpClient.post<any>(this.projURL + '/create', proj);
 }
 public update(id: number, proj: Projects): Observable<any> {
-  return this.httpClient.put<any>(this.projURL + `update/${id}`, proj);
+  return this.httpClient.put<any>(this.projURL + `/update/${id}`, proj);
 }
 public delete(id: number): Observable<any> {
-  return this.httpClient.delete<any>(this.projURL + `delete/${id}`);
+  return this.httpClient.delete<any>(this.projURL + `/delete/${id}`);
 }
 }

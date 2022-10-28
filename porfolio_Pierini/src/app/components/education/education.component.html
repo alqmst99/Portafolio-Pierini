@@ -3,22 +3,25 @@
     <H1>Formación</H1>
     <div class="col-lg-8"></div>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <button id="button-add-about" class="button-add-about" routerLink="/newEducation"> <img src="assets/add.ico" alt="" *ngIf="isLogged"> </button>
+        <button id="button-add-about" class="button-add-about" routerLink="/newEducation" *ngIf="isLogged"> <i class="bi bi-node-plus-fill" ></i> </button>
        
     </div>
+    <div class="col-lg-1 "></div>
+    <div class="col-lg-10 ">
     <div  *ngFor="let education of edu">
-        <ul class="fluid" >
-            <li>
-                <h2>INSTITUCION:  {{education.nameE}}</h2><br>
-                <h3>Fecha: {{education.dateI}}</h3>
-                 <h3> {{education.dateF}}</h3>
-                <h3> Titulo 
-                    {{education.dateI}}</h3>
-                </li>
+        <div class="education fluid" >
+            <button id="button-edit" class="button-edit " routerLink="/editEducation/{{education.id}} "><i class="bi bi-pencil-square"></i></button>
+            <button id="button-erase-about" (click)="delete(education.id)"><i class="bi bi-trash" *ngIf="isLogged"></i></button>
+            <div>
+                <h2><u>INSTITUCIÓN</u> </h2>
+                <h2>{{education.nameE}}</h2>
+                <h5>({{education.dateI}}--{{education.dateF}})</h5><br>
+                <h3><u> Titúlo </u></h3>
+                    <h3>  {{education.descEd}}</h3>
+            </div>
             
-                <button id="button-edit" class="button-edit " routerLink="/editEducation/{{education.id}} "> <img src="assets/edit.ico" alt=""> </button>
-        <button id="button-erase-about" (click)="delete(education.id)"> <img src="assets/del.ico" alt=""></button>
-        </ul>
+        </div>
+        </div>
         
    
     </div>

@@ -15,25 +15,27 @@ export class EditAboutComponent implements OnInit {
   constructor(private perService: PersonService, private activatedRouter: ActivatedRoute , private router: Router, public imageServ :ImageService) { }
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRouter.snapshot.params['1'];
+   
     this.perService.detail(1).subscribe(data => { 
       this.per=data;
     },err =>{
       alert("error in the modification");
-      this.router.navigate(['']);
+      this.router.navigate(['/home']);
     } )
   }
 onEdit():void{
-  const id = this.activatedRouter.snapshot.params['2'];
+  const id = this.activatedRouter.snapshot.params['1'];
+  this.per.imgP = this.imageServ.url;
 this.perService.update(1, this.per).subscribe(data => {
-  this.router.navigate(['']);
+  this.router.navigate(['/home']);
 }, err => {
   alert("error in the edition");
-  this.router.navigate(['']);
+  this.router.navigate(['/home']);
 })
 }
-uploadImg($event:any){
-const id =this.activatedRouter.snapshot.params['2'];
+uploadImg($event : any){
+const id =this.activatedRouter.snapshot.params['1'];
 const name = "perfil_"+ id;
   this.imageServ.uploadImg($event, name);
 }

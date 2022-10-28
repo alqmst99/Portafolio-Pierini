@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from 'src/app/model/person.model';
 
 @Component({
   selector: 'app-footer',

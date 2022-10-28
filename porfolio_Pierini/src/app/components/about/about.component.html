@@ -4,8 +4,8 @@
                 <img src={{person.imgP}} class="img-fluid">
              </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="name lastName"  >
-                <p><b>{{person.name}}--{{person.lastName}}  </b></p>
-                <p><b>Full Stack Developer Jr.</b></p>
+                <h3><b>{{person.name}} -- {{person.lastName}}</b></h3>
+                <h4><b>Full Stack Developer Jr.</b></h4>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                
@@ -13,7 +13,7 @@
                     <p>{{person.descP}}</p>
                 
                
-               /* <button id="button-edit" class="button-edit-about " routerLink="/editAbout/1" > <img src="assets/edit.ico" alt="" > </button>
+               <button id="button-edit" class="button-edit-about " routerLink="/editAbout/1" *ngIf="isLogged"> <i class="bi bi-pencil-square"></i> </button>
                  
             
         </div>

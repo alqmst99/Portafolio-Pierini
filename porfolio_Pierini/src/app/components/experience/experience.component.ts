@@ -13,15 +13,19 @@ export class ExperienceComponent implements OnInit {
 exp : Experience[]= [];
 
   constructor(private expService : ExperienceService, private tokenService: TokenService) { }
- 
+  
   isLogged =false;
+  isAdm=false
   ngOnInit(): void {
     this.chargeExp();
     if(this.tokenService.getToken()){
       this.isLogged=true;
+     
     } else{
       this.isLogged=false;
       }
+     
+      
     }
 chargeExp():void{
   this.expService.list().subscribe(data => { this.exp =data;})
@@ -31,9 +35,11 @@ chargeExp():void{
   this.expService.delete(id).subscribe(
     data => {
       this.chargeExp();
+      alert('this experience hab bean delete');
   }, err =>{
     alert("can't delete experience");
   }
   )}
  }
+
 }

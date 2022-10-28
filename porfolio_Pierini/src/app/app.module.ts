@@ -28,6 +28,9 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { interceptorProvider } from './service/interceptor-service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RegisterComponent } from './components/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -50,6 +53,8 @@ import { interceptorProvider } from './service/interceptor-service';
     EditHysComponent,
     EditAboutComponent,
     NewProjectsComponent,
+    RegisterComponent,
+
    
   ],
   imports: [
@@ -60,8 +65,8 @@ import { interceptorProvider } from './service/interceptor-service';
     HttpClientModule,
     FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage())
-
+    provideStorage(() => getStorage()),
+    FontAwesomeModule
   ],
   providers: [
    interceptorProvider

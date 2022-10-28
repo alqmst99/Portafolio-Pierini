@@ -17,17 +17,17 @@ export class EditEducationComponent implements OnInit {
     this.eduService.detail(id).subscribe(data => { 
       this.edu = data;
     }, err =>{
-      alert("error in the modifaication");
-      this.router.navigate(['']);
+      alert("erroron update");
+      this.router.navigate(['/home']);
     } )
   }
 onEdit():void{
   const id = this.activatedRouter.snapshot.params['id'];
 this.eduService.update(id, this.edu).subscribe(data => {
-  this.router.navigate(['']);
+  this.router.navigate(['/home']);
 }, err => {
-  alert("error in the modifaication");
-  this.router.navigate(['']);
+  alert("error on update");
+  this.router.navigate(['/home']);
 })
 }
 }

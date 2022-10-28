@@ -1,6 +1,11 @@
 .container{
     margin-top: 10%;
     margin-bottom: 13%;
-    box-shadow: 5px 5px 5px #000  ;
+    box-shadow: 10px 5px 5px #000  ;
     background: gray;
+    padding: 5PX;
+}
+button{
+    margin-top: 10PX;
+   
 }

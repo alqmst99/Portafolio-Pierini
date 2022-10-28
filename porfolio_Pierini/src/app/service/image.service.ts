@@ -9,16 +9,16 @@ url: string='';
   constructor(private storage: Storage) { }
 
  public uploadImg($event:any, name: string){
-  const file =$event.target.file[0]
+  const file =$event.target.files[0]
   const imgRef= ref(this.storage, `image/` + name)
   uploadBytes(imgRef, file).then(Response =>{this.getImage()} ).catch(error => console.log(error))
   console.log(file);
 
 }
 getImage(){
-const imgRef = ref(this.storage, 'imagen')
+const imgRef = ref(this.storage, 'image')
 list(imgRef).then(async Response =>{ for(let item of Response.items){
-  this.url=await getDownloadURL(item);
+  this.url = await getDownloadURL(item);
   console.log("la URL es : " + this.url);
 }} ).catch(error => console.log(error))
 }

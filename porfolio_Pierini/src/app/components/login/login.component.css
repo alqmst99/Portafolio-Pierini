@@ -1,0 +1,47 @@
+
+
+div, h1, p, a, video, h2{
+    z-index: 2;
+    position: relative;
+}
+.row {
+  position: relative;
+  top: 30%;
+  z-index: 2;
+   max-width: 100%;
+  text-align: center;
+}
+
+.content__heading {
+  margin-bottom: 24px;
+  color: rgb(39,39,39);
+  font-size: 44px;
+}
+
+.content__teaser {
+  margin-bottom: 24px;
+  color: rgb(89,89,89);
+  font-size: 22px;
+}
+
+.content__cta {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 48px;
+  color: rgb(255,60,100);
+  font-size: 22px;
+  text-decoration: none;
+  border: solid 4px rgb(255,60,100);
+}
+
+.video {
+  position: fixed;
+  top: 50%; left: 50%;
+  z-index: 1;
+  min-width: 150%;
+  min-height: 100%;
+  width: 1080px;
+  height: 1080px;
+  transform: translate(-50%, -50%);
+}
+

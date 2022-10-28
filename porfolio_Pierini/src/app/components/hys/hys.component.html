@@ -1,5 +1,5 @@
 <div class="row">
-  <h1>Hart & Soft Skill</h1>
+  <h1>Hard & Soft Skill</h1>
   <div class="col-lg-8"></div>
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
     <button id="button-add-about" type="button" class="button-add" routerLink="/newSkill"> <img
@@ -11,16 +11,16 @@
     [percent]="skill.porcent" 
     [radius]="50" 
     [title]="skill.name" 
-    [showUnits]="true" 
+    [showUnits]="false" 
     [outerStrokeWidth]="10"
     [innerStrokeWidth]="3"
-    [outerStrokeColor]="'#ee9900'" 
-    [innerStrokeColor]="'#C7E596'" 
+    [outerStrokeColor]="'#ee99aa'" 
+    [innerStrokeColor]="'#a6fff2'" 
     [animation]="true"
     [animationDuration]="500"></circle-progress>
   </div>
-    <button id="button-edit" class="button-edit " routerLink="/editSkill/{{skill.id}}"> <img src="assets/add.ico" alt=""> </button>
-    <button id="button-erase" (click)="delete(skill.id)"> <img src="assets/del.ico" alt=""></button>
+    <button id="button-edit" class="button-edit " routerLink="/editSkill/{{skill.id}}"><i class="bi bi-pencil-square"></i></button>
+    <button id="button-erase" (click)="delete(skill.id)"><i class="bi bi-trash"></i></button>
   </div>
 
 </div>

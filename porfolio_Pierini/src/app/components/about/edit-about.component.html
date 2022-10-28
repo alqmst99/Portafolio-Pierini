@@ -1,28 +1,32 @@
-<div class="row " style="background: #672067;" >
-    <div class="container col-6" style="border: 5px solid #000000 ; border-radius: 10px;" *ngIf="per">
+<div class="row " style="background: linear-gradient(90deg, rgba(12, 132, 192, 0.9) 0%, rgb(8, 8, 204) 50%, rgba(209, 12, 209, 0.849) 100%); width: 100%;" >
+  <div class="container col-6" style="border-radius: 10px;" *ngIf="per">
 <form (ngSubmit)="onEdit()" novalidate #f="ngForm">
     <div class="form-outline ">
-        <label class="form-label" for="nameE">nombre</label>
+        <label class="form-label" for="nameE">NOMBRE/S</label>
         <input type="text" id="name" class="form-control" name="name" [(ngModel)]="per.name" required />
         
       </div>
       
       <div class="form-outline">
-        <label class="form-label" for="dateI">apellido</label>
+        <label class="form-label" for="dateI">APELLIDO/S</label>
         <input type="text" id="lastName" class="form-control" name="lastName" [(ngModel)]="per.lastName" required/>
         
       </div>
       
       <div class="form-outline">
-        <label class="form-label" for="dateF">Descripcion</label>
+        <label class="form-label" for="dateF">DESCRIPCIÓN</label>
         <input type="text" id="descP" class="form-control" name="descP" [(ngModel)]="per.descP" required />
         
       </div>
       <div class="form-outline">
         <label class="form-label" for="imgP">imagen</label>
-        <input type="file" id="imgP" class="form-control" name="imgP" [(ngModel)]="per.imgP" (change)="uploadImg($event) " accept=".jpg, .jpeg, .png"/>
+        <input type="file" id="imgP" class="form-control" name="imgP" [(ngModel)]="per.imgP" (change)="uploadImg($event)" accept=".jpg, .jpeg, .png"/>
         
       </div>
+      <div class="image">
+        <img [src]="imageServ.url" style="width: 100px;" alt="">
+      </div>
+      <br>
       <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
 </form>
         

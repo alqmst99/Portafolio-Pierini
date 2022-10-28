@@ -1,16 +1,19 @@
 .row{
     padding: 15px;
-    background: linear-gradient(90deg, rgba(210,50,199,1) 0%, rgba(13,12,154,1) 50%, rgba(252,69,251,0.6979385504201681) 100%);;
-        
+    background: linear-gradient(90deg, rgba(12, 132, 192, 0.9) 0%, rgb(8, 8, 204) 50%, rgba(209, 12, 209, 0.849) 100%);      
 }
 #about-name{
     text-align: left;
+}
+i{
+    font-size: 150%;
 }
 div{
     
     background: transparent;
     color: #ffffff;
-   
+    font-family: 'Times New Roman', Times, serif; 
+    text-shadow: 5px 8px 10px rgb(0, 0, 0);
     text-align: center;
     align-items: center;
 }

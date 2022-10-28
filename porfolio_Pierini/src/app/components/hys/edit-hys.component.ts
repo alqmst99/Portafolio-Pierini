@@ -16,19 +16,19 @@ export class EditHysComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.hysService.detail(id).subscribe(data => { 
-      this.skill=data;
-    },err =>{
+      this.skill = data;
+    }, err =>{
       alert("error in the modifaication");
-      this.router.navigate(['']);
+      this.router.navigate(['/home']);
     } )
   }
 onEdit():void{
   const id = this.activatedRouter.snapshot.params['id'];
-this.hysService.update(id, this.skill).subscribe(data => {
-  this.router.navigate(['']);
+this.hysService.update(id, this.skill).subscribe( data => {
+  this.router.navigate(['/home']);
 }, err => {
-  alert("error in the modifaication");
-  this.router.navigate(['']);
+  alert("error on update");
+  this.router.navigate(['/home']);
 })
 }
 }
