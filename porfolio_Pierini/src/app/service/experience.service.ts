@@ -8,7 +8,7 @@ import{Observable} from 'rxjs';
 })
 export class ExperienceService {
 
-  expURL= 'http://localhost:8080/experience/'
+  expURL= 'https://backend-portafolio-pierini.herokuapp.com/experience/'
 
  
  constructor(private httpClient:HttpClient) { }

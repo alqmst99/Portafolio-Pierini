@@ -18,16 +18,17 @@ export class EditHysComponent implements OnInit {
     this.hysService.detail(id).subscribe(data => { 
       this.skill = data;
     }, err =>{
-      alert("error in the modifaication");
+      alert("error al actualizar intente nuevamente o revise sus permisos");
       this.router.navigate(['/home']);
     } )
   }
 onEdit():void{
   const id = this.activatedRouter.snapshot.params['id'];
 this.hysService.update(id, this.skill).subscribe( data => {
+  alert("se a actualizado correctamente ");
   this.router.navigate(['/home']);
 }, err => {
-  alert("error on update");
+  alert("error al actualizar intente nuevamente o revise sus permisos");
   this.router.navigate(['/home']);
 })
 }

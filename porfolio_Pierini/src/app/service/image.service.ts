@@ -15,6 +15,13 @@ url: string='';
   console.log(file);
 
 }
+public uploadImgP($event:any, name: string){
+  const file =$event.target.files[0]
+  const imgRef= ref(this.storage, `project/` + name)
+  uploadBytes(imgRef, file).then(Response =>{this.getImageP()} ).catch(error => console.log(error))
+  console.log(file);
+
+}
 getImage(){
 const imgRef = ref(this.storage, 'image')
 list(imgRef).then(async Response =>{ for(let item of Response.items){
@@ -22,4 +29,11 @@ list(imgRef).then(async Response =>{ for(let item of Response.items){
   console.log("la URL es : " + this.url);
 }} ).catch(error => console.log(error))
 }
+getImageP(){
+  const imgRef = ref(this.storage, 'project')
+  list(imgRef).then(async Response =>{ for(let item of Response.items){
+    this.url = await getDownloadURL(item);
+    console.log("la URL es : " + this.url);
+  }} ).catch(error => console.log(error))
+  }
 }

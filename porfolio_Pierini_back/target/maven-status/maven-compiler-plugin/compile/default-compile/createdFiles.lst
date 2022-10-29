@@ -2,6 +2,7 @@ com\Pierini\Portafolio\Repository\IExperienceRepo.class
 com\Pierini\Portafolio\Segurity\Repository\IUsuarioRepo.class
 com\Pierini\Portafolio\Segurity\Entity\UsuarioPrincipal.class
 com\Pierini\Portafolio\Segurity\Service\UserDetailImpl.class
+com\Pierini\Portafolio\Controller\ProjectController.class
 com\Pierini\Portafolio\Entity\Projects.class
 com\Pierini\Portafolio\Segurity\Controller\AuthController.class
 com\Pierini\Portafolio\Segurity\Entity\Rol.class
@@ -24,6 +25,7 @@ com\Pierini\Portafolio\Dto\LoginUser.class
 com\Pierini\Portafolio\Service\ExperienceService.class
 com\Pierini\Portafolio\Entity\Experience.class
 com\Pierini\Portafolio\Entity\Skill.class
+com\Pierini\Portafolio\Service\ProjectsService.class
 com\Pierini\Portafolio\Dto\JwtDto.class
 com\Pierini\Portafolio\Service\EducationService.class
 com\Pierini\Portafolio\Service\SkillService.class
@@ -35,6 +37,7 @@ com\Pierini\Portafolio\PortafolioApplication.class
 com\Pierini\Portafolio\Repository\IEducationRepo.class
 com\Pierini\Portafolio\Dto\DtoExperience.class
 com\Pierini\Portafolio\Dto\NewUser.class
+com\Pierini\Portafolio\Dto\DtoProjects.class
 com\Pierini\Portafolio\Controller\PersonController.class
 com\Pierini\Portafolio\Repository\IProjectsRepo.class
 com\Pierini\Portafolio\Segurity\Service\UsuarioService.class

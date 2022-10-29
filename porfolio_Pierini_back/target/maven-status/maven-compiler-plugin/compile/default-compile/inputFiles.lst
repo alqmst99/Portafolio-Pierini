@@ -13,6 +13,7 @@ C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfol
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Repository\IUsuarioRepo.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\PortafolioApplication.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\ExperienceController.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\DtoProjects.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\DtoPerson.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Entity\UsuarioPrincipal.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Dto\JwtDto.java
@@ -28,11 +29,13 @@ C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfol
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\MainSecurity.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\Mensaje.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Service\ImpPersonService.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\ProjectController.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\Entity\Usuario.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Entity\Education.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Segurity\JWT\jwtTokenFilter.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Repository\IPersonRepository.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Controller\EduactionController.java
+C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Service\ProjectsService.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Repository\IExperienceRepo.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Service\ExperienceService.java
 C:\Users\Nahue\OneDrive\Escritorio\proyecto Final\porfolio-Pierini-Nahuel\porfolio_Pierini_back\src\main\java\com\Pierini\Portafolio\Service\SkillService.java

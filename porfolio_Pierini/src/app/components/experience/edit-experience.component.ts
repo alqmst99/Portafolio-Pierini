@@ -18,16 +18,17 @@ exp : Experience;
     this.expService.detail(id).subscribe(data => { 
       this.exp = data;
     }, err =>{
-      alert("error in the modifaication");
+      alert("error al modificar");
       this.router.navigate(['/home']);
     } )
   }
 onEdit():void{
   const id = this.activatedRouter.snapshot.params['id'];
 this.expService.update(id, this.exp).subscribe( data => {
+  alert("actualizacion exitosa");
   this.router.navigate(['/home']);
 }, err => {
-  alert("error on update");
+  alert("error al actualizar");
   this.router.navigate(['/home']);
 })
 }

@@ -6,9 +6,10 @@ div, h1, p, a, video, h2{
 }
 .row {
   position: relative;
-  top: 30%;
+  top: 50%;
+ 
   z-index: 2;
-   max-width: 100%;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -38,10 +39,11 @@ div, h1, p, a, video, h2{
   position: fixed;
   top: 50%; left: 50%;
   z-index: 1;
-  min-width: 150%;
-  min-height: 100%;
-  width: 1080px;
-  height: 1080px;
-  transform: translate(-50%, -50%);
+  min-width: 8000px;
+  min-height: 1000px;
+  width: 720px;
+  height: 720px;
+  transform: scale(100%, 150%) translate(-50%, -50%);
 }
+
 

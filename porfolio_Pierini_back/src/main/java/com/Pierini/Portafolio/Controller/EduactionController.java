@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Pieirni Nahuel Nicolas
  */
 @RestController
-@RequestMapping("/education")
-@CrossOrigin(origins = "http://localhost:4200/")
+@RequestMapping("education")
+@CrossOrigin(origins = "https://frontend-portafolio-pierini.web.app/")
 public class EduactionController {
 
     @Autowired

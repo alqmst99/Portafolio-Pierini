@@ -8,7 +8,7 @@ import { Person } from '../model/person.model';
   providedIn: 'root'
 })
 export class PersonService {
-perURL = 'http://localhost:8080/person/'
+perURL = 'https://backend-portafolio-pierini.herokuapp.com/person/'
   
   constructor(private httpClient : HttpClient) {}
   

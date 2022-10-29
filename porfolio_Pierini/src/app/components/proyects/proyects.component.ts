@@ -12,9 +12,10 @@ export class ProyectsComponent implements OnInit {
   proj :Projects[]= [];
 
   constructor(private projServ : ProjectsService, private tokenService: TokenService) { }
- 
+  isAdmin:any;
   isLogged =false;
   ngOnInit(): void {
+    this.getRol();
     this.chargeProj();
     if(this.tokenService.getToken()){
       this.isLogged=true;
@@ -35,4 +36,8 @@ chargeProj():void{
   }
   )}
  }
+ getRol(){
+  const rol: string [] =this.tokenService.getAuthorities();
+  console.log('Autho',rol);
+return (this.isAdmin=rol); }
 }

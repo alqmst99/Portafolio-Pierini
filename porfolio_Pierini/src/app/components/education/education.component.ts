@@ -13,9 +13,10 @@ export class EducationComponent implements OnInit {
   edu : Education[]= [];
 
   constructor(private eduService : EducationService, private tokenService: TokenService) { }
-
+  isAdmin:any;
   isLogged =false;
   ngOnInit(): void {
+    this.getRol();
     this.chargeEdu();
     if(this.tokenService.getToken()){
       this.isLogged=true;
@@ -32,9 +33,12 @@ chargeEdu():void{
     data => {
       this.chargeEdu();
   }, err =>{
-    alert("can't delete education");
+    alert("no se puede eliminar intente nuevamente o verifique sus credenciales");
   }
   )}
  }
-
+ getRol(){
+  const rol: string [] =this.tokenService.getAuthorities();
+  console.log('Autho',rol);
+return (this.isAdmin=rol); }
 }

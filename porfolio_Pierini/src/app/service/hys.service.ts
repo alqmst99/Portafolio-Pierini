@@ -8,7 +8,7 @@ import { Hys } from '../model/hys.model';
   providedIn: 'root'
 })
 export class HysService {
-  skillURL = 'http://localhost:8080/skill/';
+  skillURL = 'https://backend-portafolio-pierini.herokuapp.com/skill/';
 
   constructor(private httpClient: HttpClient) { }
   public list(): Observable<Hys[]> {

@@ -23,22 +23,22 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/person/")
-@CrossOrigin (origins = "http://localhost:4200/")
+@RequestMapping("person")
+@CrossOrigin (origins = "https://frontend-portafolio-pierini.web.app/")
 public class PersonController {
 @Autowired 
 ImpPersonService personService;
 //list
 
    
-@GetMapping("list")
+@GetMapping("/list")
     public ResponseEntity<List<Person>> list() {
         List<Person> list = personService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
    
    
-    @GetMapping("detail/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Person> getById(@PathVariable("id") int id){
         if(!personService.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
@@ -60,11 +60,12 @@ ImpPersonService personService;
             return new ResponseEntity(new Mensaje("Person hab bean add"), HttpStatus.OK);
 
         }*/
+   
     //Update Person
 
-   
-    @PreAuthorize ("hasRole('ADMIN')")
- @PutMapping("update/{id}")
+ @PreAuthorize ("hasRole('ADMIN')")
+ @PutMapping("/update/{id}")
+    
   public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPerson dtoPerson){
       //validations
       //exist id?

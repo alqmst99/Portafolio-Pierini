@@ -19,9 +19,7 @@ isLogged = false;
       this.isLogged=false;
       }
   }
-  login(){
-   
-  }
+ 
 logOut(){
   this.tokenService.logOut();
   this.router.navigate(['']);

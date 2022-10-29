@@ -14,7 +14,7 @@ export const environment = {
     measurementId: 'G-PV4W3PX548',
   },
   production: false,
-URL:'http://localhost:8080/'
+URL:'https://backend-portafolio-pierini.herokuapp.com/'
 };
 
 /*

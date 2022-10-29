@@ -24,9 +24,10 @@ export class EditEducationComponent implements OnInit {
 onEdit():void{
   const id = this.activatedRouter.snapshot.params['id'];
 this.eduService.update(id, this.edu).subscribe(data => {
+  alert("actualizacion exitosa");
   this.router.navigate(['/home']);
 }, err => {
-  alert("error on update");
+  alert("error al actualiar intente nuevamente");
   this.router.navigate(['/home']);
 })
 }

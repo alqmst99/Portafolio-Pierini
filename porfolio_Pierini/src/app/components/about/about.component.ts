@@ -15,7 +15,9 @@ export class AboutComponent implements OnInit {
   person: Person =  null;
   constructor(public personService: PersonService, private tokenService: TokenService) { }
   isLogged = false;
+  isAdmin:any;
   ngOnInit(): void {
+    this.getRol();
     this.chargePerson();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
@@ -26,6 +28,10 @@ export class AboutComponent implements OnInit {
   chargePerson() {
     this.personService.detail(1).subscribe(data => { this.person = data });
   }
+  getRol(){
+    const rol: string [] =this.tokenService.getAuthorities();
+    console.log('Autho',rol);
+  return (this.isAdmin=rol); }
 }
 
 

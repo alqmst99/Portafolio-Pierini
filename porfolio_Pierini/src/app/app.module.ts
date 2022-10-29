@@ -24,6 +24,7 @@ import { NewHysComponent } from './components/hys/new-hys.component';
 import { EditHysComponent } from './components/hys/edit-hys.component';
 import { EditAboutComponent } from './components/about/edit-about.component';
 import { NewProjectsComponent } from './components/proyects/new-projects.component';
+import { EditProjectsComponent } from './components/proyects/edit-projects.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
@@ -54,7 +55,7 @@ import { RegisterComponent } from './components/register/register.component';
     EditAboutComponent,
     NewProjectsComponent,
     RegisterComponent,
-
+EditProjectsComponent
    
   ],
   imports: [

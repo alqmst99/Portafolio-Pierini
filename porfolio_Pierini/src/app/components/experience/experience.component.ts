@@ -15,8 +15,9 @@ exp : Experience[]= [];
   constructor(private expService : ExperienceService, private tokenService: TokenService) { }
   
   isLogged =false;
-  isAdm=false
+  isAdmin:any;
   ngOnInit(): void {
+    this.getRol();
     this.chargeExp();
     if(this.tokenService.getToken()){
       this.isLogged=true;
@@ -35,11 +36,14 @@ chargeExp():void{
   this.expService.delete(id).subscribe(
     data => {
       this.chargeExp();
-      alert('this experience hab bean delete');
+      alert('la experiencia a sido eliminada');
   }, err =>{
-    alert("can't delete experience");
+    alert("no se puede borrar intente nuevamente o revise sus permisos");
   }
   )}
  }
-
+ getRol(){
+  const rol: string [] =this.tokenService.getAuthorities();
+  console.log('Autho',rol);
+return (this.isAdmin=rol); }
 }

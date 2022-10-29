@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Person } from 'src/app/model/person.model';
 import { ImageService } from 'src/app/service/image.service';
 import { PersonService } from 'src/app/service/person.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-edit-about',
@@ -16,11 +17,10 @@ export class EditAboutComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['1'];
-   
     this.perService.detail(1).subscribe(data => { 
-      this.per=data;
+     this.per=data;
     },err =>{
-      alert("error in the modification");
+      alert("error al actualizar los datos");
       this.router.navigate(['/home']);
     } )
   }
@@ -28,16 +28,17 @@ onEdit():void{
   const id = this.activatedRouter.snapshot.params['1'];
   this.per.imgP = this.imageServ.url;
 this.perService.update(1, this.per).subscribe(data => {
+  alert("edicion exitosa");
   this.router.navigate(['/home']);
 }, err => {
-  alert("error in the edition");
+  alert("error al editar");
   this.router.navigate(['/home']);
 })
 }
 uploadImg($event : any){
 const id =this.activatedRouter.snapshot.params['1'];
-const name = "perfil_"+ id;
-  this.imageServ.uploadImg($event, name);
+const name = "perfil_"+ 1;
+this.imageServ.uploadImg($event, name);
 }
 
 }

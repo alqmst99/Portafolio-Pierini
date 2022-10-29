@@ -21,10 +21,10 @@ export class NewEducationComponent implements OnInit {
   }
 onCreate(): void{
   const edu = new Education(this.nameE, this.dateI, this.dateF, this.descEd);
-  this.eduService.save(edu).subscribe(data => {alert("the experiense is save");
+  this.eduService.save(edu).subscribe(data => {alert("la formación " + this.nameE + "ha sido creada exitósamente" );
   this.router.navigate(['/home']);
 }, err =>{
-  alert("save fail");
+  alert("creacion fallida, intente nuevamente o verifique sus permisos");
   this.router.navigate(['/home']);
 } )
 }

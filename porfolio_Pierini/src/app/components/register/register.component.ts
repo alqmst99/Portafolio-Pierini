@@ -11,9 +11,9 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class RegisterComponent implements OnInit {
   name: string;
-  nameUser:string;
- email:string;
- password:string;
+  nameUser: string;
+  email: string;
+  password: string;
 
 
   constructor(private AuthServ: AuthService, private router: Router) { }
@@ -21,14 +21,14 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   onCreate(): void {
-    const usuario = new Usuario(this.name, this.nameUser,this.email,this.password);
+    const usuario = new Usuario(this.name, this.nameUser, this.email, this.password);
     this.AuthServ.create(usuario).subscribe(data => {
-      alert("the experiense is save");
-      this.router.navigate(['/home']);
+      alert("el usuario " + this.nameUser + "  a sido creado, porfavor inicie session con su usuario y contraseña");
+      this.router.navigate(['']);
     }, err => {
-      alert("save fail");
-      this.router.navigate(['/home']);
+      alert("error en las creación");
+      this.router.navigate(['']);
     })
-    
+
   }
 }

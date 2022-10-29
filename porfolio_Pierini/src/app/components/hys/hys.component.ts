@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hys } from 'src/app/model/hys.model';
+import { LoginUser } from 'src/app/model/login-user.model';
 import { HysService } from 'src/app/service/hys.service';
 import { TokenService } from 'src/app/service/token.service';
 
@@ -11,13 +12,14 @@ import { TokenService } from 'src/app/service/token.service';
 export class HYSComponent implements OnInit {
 
   skill : Hys[]= [];
-
-  constructor(private hysService : HysService, private tokenService: TokenService) { }
  
+  constructor(private Login : TokenService , private hysService : HysService, private tokenService: TokenService) { }
+  isAdmin:any;
   isLogged =false;
   ngOnInit(): void {
+    this.getRol();
     this.chargeSkill();
-    if(this.tokenService.getToken()){
+     if(this.tokenService.getToken()){
       this.isLogged=true;
     } else{
       this.isLogged=false;
@@ -32,8 +34,12 @@ chargeSkill():void{
     data => {
       this.chargeSkill();
   }, err =>{
-    alert("can't delete education");
+    alert("no se puede eliminar intente nuevamente o verifique sus permisos");
   }
   )}
  }
+ getRol(){
+  const rol: string [] =this.Login.getAuthorities();
+  console.log('Autho',rol);
+return (this.isAdmin=rol); }
 }
